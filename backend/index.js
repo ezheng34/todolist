@@ -15,7 +15,7 @@ app.get('/', (request, response) => {
     return response.status(234).send('Hi');
 });
 
-//Route to create new todo
+//Create new todo
 
 app.post('/todo', async (request, response) => {
     try {
@@ -57,7 +57,7 @@ app.get('/todo', async (request, response) => {
     }
 });
 
-// Route to get one ToDo from database by id
+// Get one ToDo from database by id
 app.get('/todo/:id', async (request, response) => {
     try {
         const {id} = request.params;
@@ -71,7 +71,7 @@ app.get('/todo/:id', async (request, response) => {
 });
 
 
-// Route to update ToDo
+// Update ToDo
 app.put('/todo/:id', async (request, response) => {
     try {
         if (
@@ -99,7 +99,7 @@ app.put('/todo/:id', async (request, response) => {
       }
 });
 
-//Route to delete a todo
+//Delete a todo
 app.delete('/todo/:id', async(request, response) => {
     try {
         const {id} = request.params;
