@@ -11,7 +11,7 @@ const ShowTodo = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://loaclhost:8080/toDo/${id}`)
+      .get(`http://localhost:8080/toDo/${id}`)
       .then((response) => {
           setTodo(response.data);
           setLoading(false);
